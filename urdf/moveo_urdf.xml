@@ -1,0 +1,6 @@
+<robot name="moveo_urdf" file="moveo_urdf.dae">
+        <Manipulator name="arm">
+          <base>base_link</base>
+          <effector>Link_5</effector>
+        </Manipulator>
+</robot>

@@ -1,0 +1,162 @@
+<?xml version="1.0" ?>
+<robot name="moveo_urdf">
+
+  <link name="base_link"/>
+
+    <joint name="Joint_1" type="revolute">
+	<origin xyz="0 0 .13" rpy="0 0 0" />
+        <axis xyz="0 0 1" />
+        <limit lower="-3.14159265359" upper="3.14159265359" effort="1000" velocity="1.919862177191" />
+        <parent link="base_link" />
+        <child link="Link_1" />
+    </joint>
+
+    <link name="Link_1">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+		<mesh filename="package://moveo_urdf/meshes/Link_1_edited.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.75294 0.75294 0.75294 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>        
+		<mesh filename="package://moveo_urdf/meshes/Link_1_edited.STL" />
+            </geometry>
+        </collision>
+        
+	<inertial>
+            <mass value="0.1" />
+            <inertia ixx="0.03" iyy="0.03" izz="0.03" ixy="0.0" ixz="0.0" iyz="0.0" />
+        </inertial>
+
+    </link>
+
+    <link name="Link_2">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+            	<mesh filename="package://moveo_urdf/meshes/Link_2_edited.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.75294 0.75294 0.75294 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+            	<mesh filename="package://moveo_urdf/meshes/Link_2_edited.STL" />
+            </geometry>
+        </collision>
+        
+	<inertial>
+            <mass value="0.1" />
+            <inertia ixx="0.03" iyy="0.03" izz="0.03" ixy="0.0" ixz="0.0" iyz="0.0" />
+        </inertial>
+
+    </link>
+    <joint name="Joint_2" type="revolute">
+        <origin xyz="0 0 0.18264" rpy="0 0 0" />
+        <parent link="Link_1" />
+        <child link="Link_2" />
+        <axis xyz="1 0 0" />
+        <limit lower="-1.5707963268" upper="1.5707963268" effort="1000" velocity="1.919862177191" />
+    </joint>
+
+    <link name="Link_3">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+		<mesh filename="package://moveo_urdf/meshes/Link_3_edited.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.75294 0.75294 0.75294 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+		<mesh filename="package://moveo_urdf/meshes/Link_3_edited.STL" />
+            </geometry>
+        </collision>
+        
+	<inertial>
+            <mass value="0.1" />
+            <inertia ixx="0.03" iyy="0.03" izz="0.03" ixy="0.0" ixz="0.0" iyz="0.0" />
+        </inertial>
+
+    </link>
+    <joint name="Joint_3" type="revolute">
+        <origin xyz="0 0 0.22" rpy="0 0 0" />
+        <parent link="Link_2" />
+        <child link="Link_3" />
+        <axis xyz="1 0 0" />
+        <limit lower="-1.5707963268" upper="1.5707963268" effort="1000" velocity="1.919862177191" />
+    </joint>
+
+    <link name="Link_4">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+		<mesh filename="package://moveo_urdf/meshes/Link_4_edited.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.75294 0.75294 0.75294 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+		<mesh filename="package://moveo_urdf/meshes/Link_4_edited.STL" />
+            </geometry>
+        </collision>
+        
+	<inertial>
+            <mass value="0.1" />
+            <inertia ixx="0.03" iyy="0.03" izz="0.03" ixy="0.0" ixz="0.0" iyz="0.0" />
+        </inertial>
+
+    </link>
+    <joint name="Joint_4" type="revolute">
+        <origin xyz="0 0 0.16988" rpy="0 0 0" />
+        <parent link="Link_3" />
+        <child link="Link_4" />
+        <axis xyz="0 0 1" />
+        <limit lower="-3.14159265359" upper="3.14159265359" effort="1000" velocity="1.919862177191" />
+    </joint>
+    <link name="Link_5">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+		<mesh filename="package://moveo_urdf/meshes/Link_5_edited.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.75294 0.75294 0.75294 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+		<mesh filename="package://moveo_urdf/meshes/Link_5_edited.STL" />
+            </geometry>
+        </collision>
+        
+	<inertial>
+            <mass value="0.1" />
+            <inertia ixx="0.03" iyy="0.03" izz="0.03" ixy="0.0" ixz="0.0" iyz="0.0" />
+        </inertial>
+
+    </link>
+    <joint name="Joint_5" type="revolute">
+        <origin xyz="0.0 0.0 0.055" rpy="0 0 0" />
+        <parent link="Link_4" />
+        <child link="Link_5" />
+        <axis xyz="1 0 0" />
+        <limit lower="-1.5707963268" upper="1.5707963268" effort="1000" velocity="1.919862177191" />
+    </joint>
+
+</robot>
+
